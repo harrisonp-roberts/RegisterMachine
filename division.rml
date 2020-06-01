@@ -1,0 +1,23 @@
+INT_DIV R1 12 R2 5
+//Begin move contents of R2 to R4, using R6 as temp
+DEB 4 1 2
+DEB 2 3 5
+INC 4 4 0
+INC 6 2 0
+DEB 6 6 7
+INC 2 5 0
+//End Move
+//Begin subtracting R5 from R1
+//Decrement R4 then decrement R1. If R4 hits 0, increment quotient and move R2 to R4 again
+DEB 4 8 9
+//Decrement R1 then loop above. If R1 hits 0, move remains of divisor into quotient and halt
+DEB 1 7 10
+//End subtracting R5 from R1
+//Begin increment quotient
+INC 3 1
+//End increment quotient
+DEB 2 11 11
+DEB 4 10 12
+DEB 2 13 14
+INC 4 12 0
+HALT 0 0 0
